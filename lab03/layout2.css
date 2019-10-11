@@ -1,0 +1,16 @@
+div#container {
+    border: 5px solid green;
+}
+
+div#header {
+    border: 5px solid red;
+}
+
+div#header h2 {
+    border: 5px solid orange;
+}
+
+div#cars, div#sports, div#music {
+    border: 5px solid blue;
+}
+
