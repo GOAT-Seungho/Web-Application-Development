@@ -1,6 +1,7 @@
 body {
   background-image: url("./background.png");
   font-family: "Verdana", "Tahoma", sans-serif;
+  font-size: 8pt;
   margin: 0;
   padding: 0;
 }
@@ -25,10 +26,12 @@ body {
   width: 800px;
   border: 4px solid gray;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .container .left {
   width: 550px;
+  float: left;
 }
 
 .container .left .left-top {
@@ -40,7 +43,6 @@ body {
   color: red;
   text-align: left;
   vertical-align: bottom;
-  border-top-left-radius: 15px;
 }
 
 .container .left .left-top img {
@@ -51,30 +53,84 @@ body {
   bottom: 4px;
 }
 
-.container .left .left-bottom {
-  -webkit-column-width: 258.5px;
-          column-width: 258.5px;
-  -webkit-column-gap: 2%;
-          column-gap: 2%;
-  text-align: left;
+.container .left .left-bottom .column_1, .container .left .left-bottom .column_2 {
+  float: left;
+  width: 47%;
+  margin-left: 2%;
 }
 
-.container .left .left-bottom p:nth-child(2n-1) {
-  font-size: 8pt;
-  font-weight: bold;
+.container .left .left-bottom .column_1 p:nth-child(2n-1), .container .left .left-bottom .column_2 p:nth-child(2n-1) {
   background-color: #E8DC9B;
   border: 2px solid gray;
   border-radius: 10px;
+  font-size: 8pt;
+  font-weight: bold;
   padding: 8px;
+  text-align: left;
   overflow: hidden;
 }
 
-.container .left .left-bottom p:nth-child(2n-1) img {
+.container .left .left-bottom .column_1 p:nth-child(2n), .container .left .left-bottom .column_2 p:nth-child(2n) {
+  text-align: left;
+  vertical-align: bottom;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.container .left .left-bottom .column_1 p:nth-child(2n) span, .container .left .left-bottom .column_2 p:nth-child(2n) span {
+  font-style: italic;
+}
+
+.container .left .left-bottom .column_1 img, .container .left .left-bottom .column_2 img {
   float: left;
-  margin: 5px;
+  margin-right: 5px;
+}
+
+.container .left .left-bottom .column_1 div, .container .left .left-bottom .column_2 div {
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .container .right {
+  overflow: hidden;
+  width: 250px;
+  background-color: #A2B964;
+}
+
+.container .right div.overview {
   float: right;
+  margin-bottom: 10pt;
+}
+
+.container .right dl {
+  font-family: "Arial", sans-serif;
+  text-align: left;
+  padding-left: 10pt;
+}
+
+.container .right dl dt {
+  font-weight: bold;
+  margin-top: 10pt;
+}
+
+.container .right dl ul {
+  padding: 0;
+}
+
+.container .right dl li {
+  list-style: none;
+}
+
+.container .footer {
+  background-color: #A2B964;
+  padding: 5px;
+  margin: 0;
+}
+
+.w3c {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=movie.css.map */
