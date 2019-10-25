@@ -1,0 +1,157 @@
+/*
+	name : Kim Seungho
+	student id : 2018044411
+*/
+
+@font-face {
+  font-family: HYUMyriad;
+  src: url(font/MyriadHYU.otf);
+}
+
+body {
+  font-family: HYUMyriad;
+  color: #939396;
+  background-color: black;
+}
+
+div#page {
+  width: 85%;
+  height: 90vh;
+  min-height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color: #3F3d42;
+}
+
+nav {
+  float: left;
+  width: 85px;
+  height: 90vh;
+  min-height: 550px;
+}
+
+nav ul {
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav ul li {
+  list-style: none;
+  height: 64px;
+  text-align: center;
+}
+
+nav img {
+  padding: 5px;
+}
+
+nav img:hover {
+  border: 2px solid #F7931e;
+  border-radius: 30px;
+}
+
+div#page > div {
+  width: 450px;
+  height: 90vh;
+  margin-right: 20px;
+  background-image: url(imgs/HYLion.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+}
+
+div#page > div h1 {
+  width: 450px;
+  position: relative;
+  top: 72%;
+  padding-top: 10px;
+  background-color: rgba(63, 61, 66, 0.75);
+  color: white;
+  font-size: 50pt;
+  text-align: center;
+  text-shadow: 2px 2px 0 #3F3d42, -2px -2px 0 #3F3d42, 2px -2px 0 #3F3d42, -2px 2px 0 #3F3d42;
+}
+
+article {
+  height: 90vh;
+  overflow: scroll;
+  margin-right: 20px;
+}
+
+article h2 {
+  color: white;
+}
+
+article section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+article hr {
+  background-color: #939396;
+  height: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+article #about p {
+  color: #F7931e;
+  margin-left: 20px;
+}
+
+article section#edu div, article section#exp div {
+  display: inline-block;
+  width: 250px;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  vertical-align: top;
+}
+
+article section#edu div p, article section#exp div p {
+  margin: 5px;
+}
+
+article section#edu div img, article section#exp div img {
+  float: right;
+  opacity: 0.7;
+  margin: 5px;
+}
+
+article section#edu div p:nth-of-type(1), article section#edu div p:nth-of-type(3), article section#exp div p:nth-of-type(1), article section#exp div p:nth-of-type(3) {
+  font-size: smaller;
+}
+
+article section#edu div p:nth-of-type(1), article section#exp div p:nth-of-type(1) {
+  color: #F7931e;
+}
+
+article section#edu div p:nth-of-type(2), article section#exp div p:nth-of-type(2) {
+  color: white;
+}
+
+article #skill p img, article #interest p img, article #contact p img {
+  margin-left: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+article #lang div {
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  overflow: hidden;
+}
+
+article #lang p {
+  width: 150px;
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=hylionCV.css.map */

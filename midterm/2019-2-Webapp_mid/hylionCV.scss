@@ -1,0 +1,167 @@
+/*
+	name : Kim Seungho
+	student id : 2018044411
+*/
+@font-face {
+	font-family: HYUMyriad;
+	src: url(font/MyriadHYU.otf);
+}
+
+body {
+    font-family: HYUMyriad;
+    color: #939396;
+    background-color: black;
+}
+
+div#page {
+    width: 85%;
+    height: 90vh;
+    min-height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: #3F3d42;
+}
+
+nav {
+    float: left;
+    width: 85px;
+    height: 90vh;
+    min-height: 550px;
+
+    ul {
+        padding: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        li {
+            list-style: none;
+            height: 64px;
+            text-align: center;
+        }
+    }
+
+    img {
+        padding: 5px;
+    }
+
+    img:hover {
+        border: 2px solid #F7931e;
+        border-radius: 30px;
+    }
+}
+
+div#page>div {
+    width: 450px;
+    height: 90vh;
+    margin-right: 20px;
+    background-image: url(imgs/HYLion.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+
+    h1 {
+        width: 450px;
+        position: relative;
+        top: 72%;
+        padding-top: 10px;
+        background-color: rgba(63, 61, 66, 0.75);
+        color: white;
+        font-size: 50pt;
+        text-align: center;
+        text-shadow:2px 2px 0 #3F3d42, -2px -2px 0 #3F3d42, 2px -2px 0 #3F3d42, -2px 2px 0 #3F3d42;
+    }
+}
+
+article {
+    height: 90vh;
+    overflow: scroll;
+    margin-right: 20px;
+
+    h2 {
+        color: white;
+    }
+
+    section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    hr {
+        background-color: #939396;
+        height: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #about {
+        p {
+            color: #F7931e;
+            margin-left: 20px;
+        }
+    }
+
+    section#edu, section#exp {
+        div {
+            display: inline-block;
+            width: 250px;
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            vertical-align: top;
+
+            p {
+                margin: 5px;
+            }
+
+            img {
+                float: right;
+                opacity: 0.7;
+                margin: 5px;
+            }
+
+            p:nth-of-type(1), p:nth-of-type(3) {
+                font-size: smaller;
+            }
+
+            p:nth-of-type(1) {
+                color: #F7931e;
+            }
+            p:nth-of-type(2) {
+                color: white;
+            }
+
+        }
+    }
+
+    #skill, #interest, #contact {
+
+
+        p {
+            img {
+                margin-left: 20px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+        }
+    }
+    #lang {
+
+        div {
+            text-align: center;
+            align-content: center;
+            overflow: hidden;
+        }
+        
+        p {
+            width: 150px;
+            display: inline-block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
