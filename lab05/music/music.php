@@ -66,6 +66,17 @@
 			<ul id="musiclist">
 				<?php 
 					$musics = glob("lab5/musicPHP/songs/*.mp3");
+
+					for ($i = count($musics) - 1 ; $i > 0 ; $i--) {
+						for ($j = 0 ; $j < $i ; $j++) {
+							if (filesize($musics[$j]) < filesize($musics[$j+1])) {
+								$temp = $musics[$j];
+								$musics[$j] = $musics[$j+1];
+								$musics[$j+1] = $temp;
+							}
+						}
+					}
+
 					foreach ($musics as $music) { ?>
 						<li class="mp3item">
 							<a href="<?=$musics?>"><?=basename($music)?></a> (<?=(int) (filesize($music)/1000)?> KB)
@@ -73,14 +84,25 @@
 					<?php } ?>
 
 				<!-- Exercise 8: Playlists (Files) -->
-				<li class="playlistitem">326-13f-mix.m3u:
-					<ul>
-						<li>Basket Case.mp3</li>
-						<li>All the Small Things.mp3</li>
-						<li>Just the Way You Are.mp3</li>
-						<li>Pradise City.mp3</li>
-						<li>Dreams.mp3</li>
-					</ul>
+
+				<?php
+					$m3us = glob("lab5/musicPHP/songs/*.m3u");
+					foreach ($m3us as $m3u) { ?>
+						<li class="playlistitem"><?=basename($m3u)?>:
+							<ul>
+								<?php 
+									$mp3_array = array();
+									foreach (file($m3u) as $line) {
+									if (strpos($line, "#") === false) {
+										$mp3_array[] = $line;
+									}
+								}
+								shuffle($mp3_array) ?>
+								<?php foreach($mp3_array as $mp3_array_item) { ?>
+									<li><?= $mp3_array_item ?></li>
+								<?php } ?>
+							</ul>
+					<?php } ?>
 			</ul>
 		</div>
 
