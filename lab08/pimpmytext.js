@@ -3,6 +3,7 @@ window.onload = function() {
     this.document.getElementById("checkbox").onchange = check;
     this.document.getElementById("snoopify").onclick = snoopify;
     this.document.getElementById("Igpay_Atinlay").onclick = pigLatin;
+    this.document.getElementById("Malkovitch").onclick = Malkovitch;
 };
 
 var bigger_count = 0;
@@ -41,32 +42,22 @@ function snoopify() {
 }
 
 function pigLatin() {
-    console.log("start");
-    var words = $("text").value;
     var vowls = ['a','e','i','o','u'];
-    var word = $("text").value.split("");
-    for ( var i=0; i<words.length; i++){
-        console.log("for start");
-        if(vowls.includes(word[i])){
-            console.log(word);
-            word.push("ay");
+
+    for (i = 0 ; i < $("text").value.length ; i++) {
+        console.log("start");
+        if (vowls.includes($("text").value[0])) {
+            $("text").value += "ay";
             break;
         } else {
-            console.log(word);
-            word.push(word.shift());
+            console.log($("text").value);
+            $("text").value = $("text").value.substr(1) + $("text").value.charAt(0);
         }
-        
     }
-    words = word.join("");
-    $("text").value=words;
+}
 
-
-    // for (i = 0 ; i < $("text").value.length ; i++) {
-    //     if ($("text").value[i] == /[aeiou]/) {
-    //         $("text").value += "ay";
-    //     } else {
-    //         $("text").value -= $("text").value[i]
-    //     }
-
-    // $("text").value.split(/[aeiou]/)
+function Malkovitch() {
+    if ($("text").value.length >= 5) {
+        $("text").value = "Malkovitch";
+    }
 }
