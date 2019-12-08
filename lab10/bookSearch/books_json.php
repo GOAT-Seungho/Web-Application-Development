@@ -1,7 +1,8 @@
 <?php
 $BOOKS_FILE = "books.txt";
 
-function filter_chars($str) {
+function filter_chars($str)
+{
 	return preg_replace("/[^A-Za-z0-9_]*/", "", $str);
 }
 
@@ -35,9 +36,25 @@ print "{\n  \"books\": [\n";
 
 // write a code to : 
 // 1. read the "books.txt"
+$lines = file($BOOKS_FILE);
+
 // 2. search all the books that matches the given category 
+$books = array();
+for ($i = 0; $i < count($lines); $i++) {
+	list($title, $author, $book_category, $year, $price) = explode("|", trim($lines[$i]));
+	if ($book_category == $category) {
+		$books[] = "	{\"category\": \"$category\", \"title\": \"$title\", \"author\": \"$author\", \"year\": $year, \"price\": $price}";
+	}
+}
+
 // 3. generate the result in JSON data format 
+for ($i = 0; $i < count($books); $i++) {
+	print $books[$i];
+	if ($i + 1 != count($books)) {
+		print ",\n";
+	} else {
+		print "\n";
+	}
+}
 
 print "  ]\n}\n";
-
-?>
