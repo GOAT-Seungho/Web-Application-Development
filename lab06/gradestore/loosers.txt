@@ -1,0 +1,9 @@
+seungho KIM;2018044411;1234;Visa
+yohan An;20159231;5678;MasterCard
+MinJae Kim;2018923112;10112;MasterCard
+;2018923112;10112;MasterCard
+;1;123;Visa
+;1;123;Visa
+;1;123;Visa
+;1;123;Visa
+asd;asd;asd;
